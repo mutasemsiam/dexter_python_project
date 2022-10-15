@@ -43,7 +43,7 @@ To run this project, you will need to add the following environment variables to
 ## Screenshots
 
 # Welcome Page 
-![App Screenshot](https://s1.gifyu.com/images/Screen_Recording_2022-10-15_at_6_10_57_PM_AdobeExpress-2.gif)
+![App Screenshot](https://s4.gifyu.com/images/Screen_Recording_2022-10-15_at_6_10_57_PM_AdobeExpress-1.gif)
  - This is the Welcome page for the Doctor which has an introduction to the website
 # Sign in 
 ![App Screenshot](https://i.ibb.co/VjnHtdp/login-screen.png)
