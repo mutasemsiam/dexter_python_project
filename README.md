@@ -44,16 +44,16 @@ To run this project, you will need to add the following environment variables to
 
 # Welcome Page 
 ![App Screenshot](https://i.ibb.co/vJ5TcnC/Screen-Recording-2022-10-15-at-6-10-57-PM-Adobe-Express.gif)
-- This is the Welcome page for the Doctor which has an introduction to the website
+ - This is the Welcome page for the Doctor which has an introduction to the website
 # Sign in 
 ![App Screenshot](https://i.ibb.co/VjnHtdp/login-screen.png)
--This is the Login page for the Doctor which he can login after we made for the Doctor an account 
+ - This is the Login page for the Doctor which he can login after we made for the Doctor an account 
 # Account
 ![App Screenshot](https://s4.gifyu.com/images/Screen_Recording_2022-10-15_at_6_16_09_PM_AdobeExpress.gif)
--This page called account which the Doctor can add patients,appointments,and payments.
+ - This page called account which the Doctor can add patients,appointments,and payments.
 # All Patients
 ![App Screenshot](https://i.ibb.co/crx6GC4/all-patient.png)
--This page contains a table displays all the information about the patients 
+ - This page contains a table displays all the information about the patients 
 # Patient information
 
 -This page will show all the information about specific patient and allows the user to edit the patient information 
