@@ -75,7 +75,7 @@ def patients(request):
     context={
     
             'patients':Patient.objects.filter(doctor = doctor),
-            'clinics': Clinic.objects.filter(doctor = doctor),
+            'clinics': doctor.doctor_clinics.all(),
         }   
 
     return render(request,'all_patients.html',context)
