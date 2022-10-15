@@ -43,10 +43,10 @@ To run this project, you will need to add the following environment variables to
 ## Screenshots
 
 # Welcome Page 
- ! [App Screenshot](https://i.ibb.co/vJ5TcnC/Screen-Recording-2022-10-15-at-6-10-57-PM-Adobe-Express.gif)
+![App Screenshot](https://i.ibb.co/vJ5TcnC/Screen-Recording-2022-10-15-at-6-10-57-PM-Adobe-Express.gif)
  - This is the Welcome page for the Doctor which has an introduction to the website
 # Sign in 
- ! [App Screenshot](https://i.ibb.co/VjnHtdp/login-screen.png)
+![App Screenshot](https://i.ibb.co/VjnHtdp/login-screen.png)
  - This is the Login page for the Doctor which he can login after we made for the Doctor an account 
 # Account
 ![App Screenshot](https://s4.gifyu.com/images/Screen_Recording_2022-10-15_at_6_16_09_PM_AdobeExpress.gif)
@@ -56,7 +56,7 @@ To run this project, you will need to add the following environment variables to
  - This page contains a table displays all the information about the patients 
 # Patient information
 
--This page will show all the information about specific patient and allows the user to edit the patient information 
+ - This page will show all the information about specific patient and allows the user to edit the patient information 
 # Payments
 ![App Screenshot](https://i.ibb.co/yynzBgv/payments-list.png)
  - This page which displays all the information about payments
