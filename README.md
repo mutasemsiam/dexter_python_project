@@ -68,7 +68,8 @@ To run this project, you will need to add the following environment variables to
 - [@mzbour](https://github.com/mzbour) - Mohammad Bzour
 - [@mutasemsiam](https://github.com/mutasemsiam) - Mutasem Siam
 
-##Trello
+## Trello
+
 - https://trello.com/b/xqQ2Akup/dexter
 
 
