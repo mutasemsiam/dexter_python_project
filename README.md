@@ -43,7 +43,7 @@ To run this project, you will need to add the following environment variables to
 ## Screenshots
 
 # Welcome Page 
-![Watch the video](https://imgur.com/a/PO7zRqs.gif)
+![Watch the video]()
  - This is the Welcome page for the Doctor which has an introduction to the website
 # Sign in 
 ![App Screenshot](https://i.postimg.cc/cHJXYMBd/login-screen.png)
@@ -68,5 +68,7 @@ To run this project, you will need to add the following environment variables to
 - [@mzbour](https://github.com/mzbour) - Mohammad Bzour
 - [@mutasemsiam](https://github.com/mutasemsiam) - Mutasem Siam
 
+##Trello
+- https://trello.com/b/xqQ2Akup/dexter
 
 
