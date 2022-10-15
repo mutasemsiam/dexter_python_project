@@ -1,7 +1,3 @@
-from multiprocessing import context
-from sre_constants import SUCCESS
-from tabnanny import check
-from tkinter.tix import Tree
 from django.shortcuts import render ,redirect
 from .models import  Doctor , Clinic , Patient   ,Appointment   , Payment
 from django.contrib import messages
