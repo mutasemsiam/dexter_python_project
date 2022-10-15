@@ -55,7 +55,7 @@ def registration(request):
         request.session['first_name'] = new_user.first_name
         request.session['last_name'] = new_user.last_name
         request.session['id'] = new_user.id
-        return redirect('/')
+        return redirect('/dashboard')
 
 def login(request):
     logged_user= Doctor.objects.filter(email=request.POST['email'])
@@ -360,3 +360,9 @@ def payment_validate(request):
         messages.success(request, 'You have added a new payment succesfully.Thank you!', extra_tags = 'payment_correct')
         
         return redirect('/account/#add_payment')
+
+def add_clinic(request):
+    
+    Clinic.objects.create(name = request.POST['name'], address = request.POST['address'], doctor = Doctor.objects.get(email = request.POST['email']))
+
+    return redirect('/dashboard')

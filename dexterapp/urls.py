@@ -29,5 +29,8 @@ urlpatterns = [
     path('dashboard/', views.show_dashboard),
     path('search-payments',csrf_exempt(views.search_payments),name="search-payments"),
     path('payments/details/<int:id>',views.payment_details),
+    path('add_clinic', views.add_clinic),
+
+    
 
 ]
