@@ -46,7 +46,7 @@ To run this project, you will need to add the following environment variables to
 ![App Screenshot](https://s1.gifyu.com/images/Screen_Recording_2022-10-15_at_6_10_57_PM_AdobeExpress-2.gif)
  - This is the Welcome page for the Doctor which has an introduction to the website
 # Sign in 
-![This is an image](https://i.ibb.co/7VSPb10/login-screen.png)
+![This is an image](https://i.postimg.cc/cHJXYMBd/login-screen.png)
  - This is the Login page for the Doctor which he can login after we made for the Doctor an account 
 # Account
 ![App Screenshot](https://s4.gifyu.com/images/Screen_Recording_2022-10-15_at_6_16_09_PM_AdobeExpress.gif)
