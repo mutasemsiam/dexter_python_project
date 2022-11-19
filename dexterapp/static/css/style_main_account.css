@@ -10,39 +10,26 @@ body{
 .main{
     width: 100%;
     margin: 0 auto;
-    /* margin-top: 70px; */
-    /* border: 2px solid black; */
     margin-bottom: 40px;
-    /* padding-top: 40px; */
 }
 
 .all_appointments{
     margin: 0 auto;
     font-weight: bold;
     margin-top: 60px;
-    /* height: 900px; */
 }
 form{
     width: 60%;
-    /* padding: 0 2% 0 0.5%; */
     margin: 0 auto;
     margin-top: 10px;
-    /* padding: 5%; */
     
 }
 
-.add_patient_container{
-    /* padding: 5%; */
-    /* width: 80%; */
-    /* margin-bottom: 200px; */
-}
 .add_container{
-    /* padding: 5%; */
     margin: 50px 0 50px 0;
 }
 .twoforms{
     gap: 0.5%;
-    /* filter: blur(1px); */
 }
 
 h3{
@@ -90,20 +77,10 @@ h3{
     
 }
 
-/* .box-btn{
-    width: 20%;
-    padding-bottom: 5%;
-    background-color: gold;
-} */
-
 #passed_appoint{
     color: green;
-    /* background-color: green; */
-    /* margin-top: 2px; */
-    /* padding: 3px; */
     width: 60%;
     font-size: 1.1em;
-    /* height: 50px; */
     margin: 0 auto;
     text-align: center;
 }
@@ -114,9 +91,6 @@ h3{
 .edit_img{
     width: 20px;
 }
-
-
-
 
 @media (max-width: 979px) {
     .one_patient_container {

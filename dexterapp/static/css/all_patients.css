@@ -1,19 +1,13 @@
 
 .all_patients{
-    /* margin-top: 30px; */
     padding-top: 60px;
     width: 80%;
-    /* height: 500px; */
-    /* background-color: red; */
   }
   
   .all_patients h3{
     text-align: center;
   }
-  .input-group{
-    /* width:270px; */
-    
-  }
+
   .all-patients_table1{
     margin-top: 30px;
   }
@@ -21,23 +15,15 @@
     justify-content: space-between;
   }
   .datepicker{
-    /* width:80px; */
     height:25px;
   }
   .time{
     margin-top: 3px;
-    /* gap: 6px; */
   }
-  .labels{
-    /* margin-top: 40px; */
-  }
-  .rounded_searching{
-    /* width:60px; */
-  }
+
   .second_table{
     margin-top: 30px;
   }
-
 
   main {
   

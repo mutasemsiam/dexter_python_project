@@ -23,7 +23,7 @@
     integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous" />
   <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 
-  </head>
+</head>
 
 <body id="page-top" style="overflow-x: hidden">
   <nav class="navbar navbar-expand-lg navbar-dark navbar-custom fixed-top bg-dark">
@@ -46,60 +46,63 @@
     </div>
   </nav>
   <main class="container all_patients">
-    
-    
+
+
     <section class="d-flex justify-content-between align-items-center border bg-light" style="padding: 7px 0 7px 0;">
-            <div class="col-sm-3"></div>
-          <div class="col-sm-6" style="min-width:220px ;"><h3>Payments List</h3></div>
-            <div class="col-sm-3" style="min-width:170px ;">
-              <form action="" method="POST" >
-                <div class="row all_patients_table_head col-md-12 labels ">
-        
-                  <div class="input-group col-md-12">
-                    <input type="text" class="form-control" id="searchField" placeholder="Search">
-                  </div>
-                </div>
-              </form>
-            </div> 
-      </section>
+      <div class="col-sm-3"></div>
+      <div class="col-sm-6" style="min-width:220px ;">
+        <h3>Payments List</h3>
+      </div>
+      <div class="col-sm-3" style="min-width:170px ;">
+        <form action="" method="POST">
+          <div class="row all_patients_table_head col-md-12 labels ">
+
+            <div class="input-group col-md-12">
+              <input type="text" class="form-control" id="searchField" placeholder="Search">
+            </div>
+          </div>
+        </form>
+      </div>
+    </section>
     <div class="app-table table-responsive">
-    <table class="table table-striped all-patients_table1 table ">
-      <thead>
-        <tr>
-          <th scope="col">Date</th>
-          <th scope="col">Patient</th>
-          <th scope="col">Amount</th>
-          <th scope="col">Method</th>
-          <th scope="col">Clinic</th>
-          <th scope="col">Updated At</th>
-          <th class="text-center" scope="col">Action</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          {% for payment in payments %}
-          <input type="hidden" name='amount'>
-          <td>{{payment.date}}</td>
-          <td>{{payment.patient.first_name}} {{payment.patient.last_name}}</td>
-          <form action="/payments/edit/{{payment.id}}" method="post">
-            {% csrf_token %}
-            <td><input style="width: 70px;" type="number" name="edited_amount" value="{{payment.amount}}"></td>
-          </form>
-          <td>{{payment.method}}</td>
-          <td>{{payment.patient.clinic.name}}</td>
-          <td>{{payment.updated_at}}</td>
-
-          <td>
-            <form action="/payments/delete/{{payment.id}}" method="post" class="d-flex justify-content-center" onSubmit="return submitForm(this);">
+      <table class="table table-striped all-patients_table1 table ">
+        <thead>
+          <tr>
+            <th scope="col">Date</th>
+            <th scope="col">Patient</th>
+            <th scope="col">Amount</th>
+            <th scope="col">Method</th>
+            <th scope="col">Clinic</th>
+            <th scope="col">Updated At</th>
+            <th class="text-center" scope="col">Action</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            {% for payment in payments %}
+            <input type="hidden" name='amount'>
+            <td>{{payment.date}}</td>
+            <td>{{payment.patient.first_name}} {{payment.patient.last_name}}</td>
+            <form action="/payments/edit/{{payment.id}}" method="post">
               {% csrf_token %}
-              <input type="image" id="delete_btn" src="{% static 'assets\images\delete.png' %}" class="delete_img" ></form>
-            <!-- <a href="/payments/delete/{{payment.id}}">Delete</a> -->
-          </td>
-        </tr>
-        {% endfor %}
+              <td><input style="width: 70px;" type="number" name="edited_amount" value="{{payment.amount}}"></td>
+            </form>
+            <td>{{payment.method}}</td>
+            <td>{{payment.patient.clinic.name}}</td>
+            <td>{{payment.updated_at}}</td>
 
-      </tbody>
-    </table>
+            <td>
+              <form action="/payments/delete/{{payment.id}}" method="post" class="d-flex justify-content-center"
+                onSubmit="return submitForm(this);">
+                {% csrf_token %}
+                <input type="image" id="delete_btn" src="{% static 'assets\images\delete.png' %}" class="delete_img">
+              </form>
+            </td>
+          </tr>
+          {% endfor %}
+
+        </tbody>
+      </table>
     </div>
     <p class="no-results" style="display: none;">No results </p>
     <div class="table-output">
@@ -109,12 +112,8 @@
             <th scope="col">Date</th>
             <th scope="col">Amount</th>
             <th scope="col">Method</th>
-            <!-- <th scope="col">Clinic</th> -->
             <th scope="col">Updated At</th>
             <th scope="col">Action</th>
-
-
-     
           </tr>
         </thead>
 
@@ -136,24 +135,22 @@
   <script src="{% static 'js/search_payments.js' %}"></script>
   <script>
     function submitForm(form) {
-        swal({
-                title: "Are you sure you want to delete this payment?",
-                // icon: "warning",
-                buttons: true,
-                // dangerMode: true,
-            })
-            .then((willDelete) => {
-                    if (willDelete) {
-                        form.submit();
-                        
-                    }
+      swal({
+        title: "Are you sure you want to delete this payment?",
+        buttons: true,
+      })
+        .then((willDelete) => {
+          if (willDelete) {
+            form.submit();
 
-                });
-            return false;
-        }
+          }
 
-    
-    </script>
+        });
+      return false;
+    }
+
+
+  </script>
 </body>
 
 </html>

@@ -2,7 +2,6 @@
 <html lang="en">
 
 <head>
-    <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
@@ -12,7 +11,6 @@
     <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
     <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <!------ Include the above in your HEAD tag ---------->
 
 
     <link rel="icon" href="Favicon.png">
@@ -51,7 +49,8 @@
             <div class="row justify-content-center">
                 <div class="col-md-8">
                     <div class="card">
-                        <div  style="height: 60px; background-color:#54b4d3 ; text-align: center; color: white; border-radius: 20px;">
+                        <div
+                            style="height: 60px; background-color:#54b4d3 ; text-align: center; color: white; border-radius: 20px;">
                             <h3 style="line-height:60px ;">Add Doctor</h3>
                         </div>
                         <div class="card-body">
@@ -108,44 +107,45 @@
                                     <input type="text" name="role" class="form-control" placeholder="role">
                                 </div>
                                 <div style="margin: 0 auto ; width: 50px">
-                                <input type="submit" value="Add" class="btn btn-primary"
-                                    style="background-color:#54b4d3 ;border:none;">
+                                    <input type="submit" value="Add" class="btn btn-primary"
+                                        style="background-color:#54b4d3 ;border:none;">
                                 </div>
                             </form>
-                 
+
                         </div>
 
                         <div style="margin-bottom:80px ;">
-                           <div style="background-color: #54b4d3; height: 60px; border-radius: 20px; margin-bottom: 20px;">
-                            <h3  style="text-align: center; line-height: 60px; color: white; ">Add Clinic</h3>
+                            <div
+                                style="background-color: #54b4d3; height: 60px; border-radius: 20px; margin-bottom: 20px;">
+                                <h3 style="text-align: center; line-height: 60px; color: white; ">Add Clinic</h3>
+                            </div>
+                            <form action="/add_clinic" method="post">
+
+                                {% csrf_token %}
+
+                                <div class="form-group">
+                                    <label for="email">Doctor Email</label>
+                                    <input type="email" class="form-control" name="email" aria-describedby="emailHelp"
+                                        placeholder="Enter email">
+                                </div>
+
+
+                                <div class="form-group">
+                                    <label for="national_id">Clinic Name</label>
+                                    <input type="text" name="name" class="form-control" placeholder="clinic name">
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="national_id">Clinic Address</label>
+                                    <input type="text" name="address" class="form-control" placeholder="address">
+                                </div>
+
+                                <div style="margin: 0 auto ; width: 50px">
+                                    <input type="submit" value="Add" class="btn btn-primary"
+                                        style="background-color:#54b4d3 ;border:none;">
+                                </div>
+                            </form>
                         </div>
-                        <form action="/add_clinic" method="post">
-
-                            {% csrf_token %}
-
-                            <div class="form-group">
-                                <label for="email">Doctor Email</label>
-                                <input type="email" class="form-control" name="email" aria-describedby="emailHelp"
-                                    placeholder="Enter email">
-                            </div>
-
-
-                            <div class="form-group">
-                                <label for="national_id">Clinic Name</label>
-                                <input type="text" name="name" class="form-control" placeholder="clinic name">
-                            </div>
-
-                            <div class="form-group">
-                                <label for="national_id">Clinic Address</label>
-                                <input type="text" name="address" class="form-control" placeholder="address">
-                            </div>
-
-                            <div style="margin: 0 auto ; width: 50px">
-                            <input type="submit" value="Add" class="btn btn-primary"
-                                style="background-color:#54b4d3 ;border:none;">
-                            </div>
-                        </form>
-                    </div>
 
                     </div>
                 </div>

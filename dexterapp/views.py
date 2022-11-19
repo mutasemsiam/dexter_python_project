@@ -1,7 +1,7 @@
-from multiprocessing import context
-from sre_constants import SUCCESS
-from tabnanny import check
-from tkinter.tix import Tree
+# from multiprocessing import context
+# from sre_constants import SUCCESS
+# from tabnanny import check
+# from tkinter.tix import Tree
 from django.shortcuts import render ,redirect
 from .models import  Doctor , Clinic , Patient   ,Appointment   , Payment
 from django.contrib import messages
@@ -233,12 +233,8 @@ def Clinic_validation(request):
 # ______________________________________________________
 def patient_validate(request):
     check = Patient.objects.filter(national_id = request.POST['national_id'])
-    # check = True
     error = False
-    # for patient in Patient.objects.filter(doctor = Doctor.objects.get(id = request.session['id'])):
-    #     if patient.national_id == request.POST['national_id']:
-    #         messages.error(request,'Patient already added!', extra_tags = 'pat_error' )
-    #         error = True
+
 
     if len(request.POST['first_name'])< 3:
         messages.error(request,'First name must at least contain two characters!', extra_tags = 'first_name' )
@@ -258,9 +254,7 @@ def patient_validate(request):
     if len(request.POST['national_id'])!=9:
         messages.error(request,'The national id must be 9 digits!!',extra_tags='national_id')
         error=True
-    # if not (request.POST['gender']):
-    #      messages.error(request,'The gender must be only mail or femail',extra_tags='gender')
-    #      error=True
+
     if len(request.POST['phone'])!=10:
          messages.error(request,'The phone number must be only 10 digits',extra_tags='phone')
          error=True   
@@ -270,9 +264,7 @@ def patient_validate(request):
     if len(request.POST['desc'])>55:
          messages.error(request,"Description can't be more than 55 characters ", extra_tags = 'desc')
          error=True
-    # if request.POST['date_of_birth'] > (datetime.now()):
-    #     messages.error(request,"Birth date must be in the past!",  extra_tags = 'date_of_birth')
-    #     error=True
+
     if  check:
         messages.error(request,'this patient already exist !! ',extra_tags='national_id')
         error=True
@@ -289,8 +281,6 @@ def patient_validate(request):
         return redirect('/account/#add_patient')
 # ______________________________________________________________________________
 def appointment_validate(request):
-    # check = Patient.objects.filter(national_id = request.POST['national_id'])
-    # check=False
     error = False
     if len(request.POST['national_id']) != 9 :
         messages.error(request,'Please enter a valid national id', extra_tags = 'a_id' )
@@ -308,23 +298,13 @@ def appointment_validate(request):
         messages.error(request,'Please enter the note with length less than 55 characters',extra_tags='appointment_note')
         error=True
     
-    # if check:
-    #     messages.error(request,'this apointment with this national_id has already been registered', extra_tags = 'n_id')
-    #     error = True
-
     if error == True:
         return redirect('/account/#add_appointment')
 
     elif error == False:
         patient = Patient.objects.get(national_id = request.POST['national_id'])
         Appointment.objects.create(national_id = request.POST['national_id'], date = request.POST['date'], start_time = request.POST['start_time'], end_time = request.POST['end_time'], note = request.POST['note'], patient = patient, doctor = Doctor.objects.get(id = request.session['id']))
-
     
-        # messages.success(request, 'You have added a new appointment succesfullymmm', extra_tags = 'success_appoint')
-        
-    # return redirect('/account/#add_appointment')
-
-        
     return HttpResponse(f'You have added a new appointment succesfully for {patient.first_name} {patient.last_name}')
 
 def delete_appointment(request,id):
@@ -346,7 +326,6 @@ def payment_validate(request):
     
     # if len(request.POST['method'])==0:
     #     messages.error(request,'Please Enter a correct methodes -enter -C- for credit or -M- for cash',extra_tags='methodp')
-    #     error=True
     if len(request.POST['national_id'])!=9:
         messages.error(request,'National id number must be nine numbers only',extra_tags='np')
         error=True   

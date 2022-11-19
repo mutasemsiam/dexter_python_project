@@ -31,6 +31,4 @@ urlpatterns = [
     path('payments/details/<int:id>',views.payment_details),
     path('add_clinic', views.add_clinic),
 
-    
-
 ]
