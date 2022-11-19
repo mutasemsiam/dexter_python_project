@@ -230,7 +230,7 @@ def Clinic_validation(request):
         messages.success(request, 'You have a new clinic !!', extra_tags = 'clinic_s')
         
         return redirect('/')
-# ______________________________________________________
+# _____________________________________________________
 def patient_validate(request):
     check = Patient.objects.filter(national_id = request.POST['national_id'])
     error = False
